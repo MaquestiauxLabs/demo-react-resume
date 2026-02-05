@@ -18,9 +18,9 @@ const App: React.FC = () => {
         </div>
         <div className="md:col-span-2">
           <Experiences experiences={experiences as Experience[]} />
-          <div>Eduction</div>
           <div>Languages</div>
           <div>Trainings</div>
+          <div>Education</div>
         </div>
       </div>
       <div>FOOTER</div>
