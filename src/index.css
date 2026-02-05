@@ -115,11 +115,10 @@
   }
 
   .about-me {
-    @apply py-4 px-6;
+    @apply py-4 px-6 bg-amber-100 rounded-lg shadow-md m-6;
 
     .about-me-content {
-      @apply text-lg leading-relaxed text-gray-700 mb-6;
-      text-align: justify;
+      @apply text-justify leading-relaxed text-gray-700 mb-6;
     }
   }
 }
