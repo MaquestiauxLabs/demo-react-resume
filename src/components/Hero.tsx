@@ -1,6 +1,10 @@
 import type { PersonalInfo } from '@interfaces';
 import React from 'react';
-import { HiOutlineLocationMarker, HiOutlineMail } from 'react-icons/hi';
+import {
+  HiOutlineLocationMarker,
+  HiOutlineMail,
+  HiPhoneOutgoing,
+} from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 interface HeroProps extends PersonalInfo {}
@@ -35,7 +39,12 @@ const Hero: React.FC<HeroProps> = ({
                 {email}
               </p>
             )}
-            {phone && <p className="hero-meta-phone">{phone}</p>}
+            {phone && (
+              <p className="hero-meta-item">
+                <HiPhoneOutgoing className="hero-icon" />
+                {phone}
+              </p>
+            )}
             <div className="hero-socials">
               {linkedin && (
                 <a
