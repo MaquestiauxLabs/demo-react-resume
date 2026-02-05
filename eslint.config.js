@@ -32,6 +32,7 @@ export default defineConfig([
         'error',
         { argsIgnorePattern: '^_' },
       ],
+      '@typescript-eslint/no-empty-object-type': 'warn',
     },
   },
   { ignores: ['dist'] },
