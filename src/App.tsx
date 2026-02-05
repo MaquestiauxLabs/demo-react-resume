@@ -1,10 +1,11 @@
 import AboutMe from '@components/AboutMe';
+import Experiences from '@components/Experiences';
 import Skills from '@components/Skills';
+import type { Experience, SkillCategory } from '@interfaces';
 import type React from 'react';
 import './App.css';
 import Hero from './components/Hero';
-import { personalInfo, skills } from './data';
-import type { SkillCategory } from '@interfaces';
+import { experiences, personalInfo, skills } from './data';
 
 const App: React.FC = () => {
   return (
@@ -15,8 +16,14 @@ const App: React.FC = () => {
           <AboutMe {...personalInfo} />
           <Skills skills={skills as SkillCategory[]} />
         </div>
-        <div className="md:col-span-2">right</div>
+        <div className="md:col-span-2">
+          <Experiences experiences={experiences as Experience[]} />
+          <div>Eduction</div>
+          <div>Languages</div>
+          <div>Trainings</div>
+        </div>
       </div>
+      <div>FOOTER</div>
     </div>
   );
 };

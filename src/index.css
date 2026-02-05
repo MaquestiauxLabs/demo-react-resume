@@ -122,6 +122,34 @@
     }
   }
 
+  .experiences {
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6 border border-amber-100;
+
+    .experiences-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
+
+    .experiences-list {
+      @apply mb-4 mt-4;
+    }
+
+    .experience-item {
+      @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
+    }
+
+    .experience-item-header {
+      @apply flex justify-between items-center mb-2;
+
+      .experience-item-title {
+        @apply text-lg font-semibold text-gray-800;
+      }
+
+      .experience-item-duration {
+        @apply text-sm text-gray-600;
+      }
+    }
+  }
+
   .skills {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg m-6 border border-amber-100;
 
