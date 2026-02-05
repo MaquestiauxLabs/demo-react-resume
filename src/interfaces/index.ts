@@ -1,2 +1,2 @@
 export type { PersonalInfo } from './personal-info';
-export type { Skill, SkillCategory, Skills } from './skills';
+export type { Skill, SkillCategory } from './skills';
