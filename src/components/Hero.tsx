@@ -16,38 +16,32 @@ const Hero: React.FC<HeroProps> = ({
   tagline,
 }) => {
   return (
-    <header className="relative overflow-hidden">
-      <div className="relative z-10 py-4 px-6">
-        <div className="text-center  bg-primary-50/70 p-8 shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-            {name}
-          </h1>
-          {title && (
-            <h2 className="text-xl md:text-2xl  font-medium mb-2">{title}</h2>
-          )}
-          {tagline && (
-            <p className="text-s md:text-l text-gray-700 mb-6">{tagline}</p>
-          )}
-          <div className="flex flex-wrap justify-center gap-6">
+    <header className="hero">
+      <div className="hero-content">
+        <div className="hero-card">
+          <h1 className="hero-name">{name}</h1>
+          {title && <h2 className="hero-title">{title}</h2>}
+          {tagline && <p className="hero-tagline">{tagline}</p>}
+          <div className="hero-meta">
             {location && (
-              <p className="text-lg text-gray-600 flex items-center gap-2">
-                <HiOutlineLocationMarker className="text-blue-500" />
+              <p className="hero-meta-item">
+                <HiOutlineLocationMarker className="hero-icon" />
                 {location}
               </p>
             )}
             {email && (
-              <p className="text-lg text-gray-600 flex items-center gap-2">
-                <HiOutlineMail className="text-blue-500" />
+              <p className="hero-meta-item">
+                <HiOutlineMail className="hero-icon" />
                 {email}
               </p>
             )}
-            {phone && <p className="text-lg text-gray-600">{phone}</p>}
+            {phone && <p className="hero-meta-phone">{phone}</p>}
             {linkedin && (
               <a
                 href={`https://${linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg text-blue-600 hover:underline"
+                className="hero-linkedin"
               >
                 <SiLinkedin />
               </a>
@@ -57,9 +51,9 @@ const Hero: React.FC<HeroProps> = ({
                 href={`https://${github}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg text-gray-800 hover:underline"
+                className="hero-github"
               >
-                <SiGithub className="text-blue-500" />
+                <SiGithub className="hero-icon" />
               </a>
             )}
           </div>

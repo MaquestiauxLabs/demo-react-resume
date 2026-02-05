@@ -36,4 +36,108 @@
 }
 
 @layer components {
+  .hero {
+    position: relative;
+    overflow: hidden;
+
+    & .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 1rem 1.5rem;
+    }
+
+    & .hero-card {
+      text-align: center;
+      background-color: rgb(240 249 255 / 0.7);
+      padding: 2rem;
+      box-shadow:
+        0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    & .hero-name {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    }
+
+    & .hero-title {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    & .hero-tagline {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: rgb(55 65 81);
+      margin-bottom: 1.5rem;
+    }
+
+    & .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    & .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: rgb(75 85 99);
+    }
+
+    & .hero-meta-phone {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: rgb(75 85 99);
+    }
+
+    & .hero-linkedin {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: rgb(37 99 235);
+      text-decoration: none;
+    }
+
+    & .hero-github {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: rgb(31 41 55);
+      text-decoration: none;
+    }
+
+    & .hero-icon {
+      color: rgb(59 130 246);
+    }
+
+    & .hero-linkedin:hover,
+    & .hero-github:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      & .hero-name {
+        font-size: 3rem;
+        line-height: 1;
+      }
+
+      & .hero-title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      & .hero-tagline {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+    }
+  }
 }
