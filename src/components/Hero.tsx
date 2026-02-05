@@ -36,26 +36,28 @@ const Hero: React.FC<HeroProps> = ({
               </p>
             )}
             {phone && <p className="hero-meta-phone">{phone}</p>}
-            {linkedin && (
-              <a
-                href={`https://${linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-linkedin"
-              >
-                <SiLinkedin />
-              </a>
-            )}
-            {github && (
-              <a
-                href={`https://${github}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-github"
-              >
-                <SiGithub className="hero-icon" />
-              </a>
-            )}
+            <div className="hero-socials">
+              {linkedin && (
+                <a
+                  href={`https://${linkedin}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-linkedin"
+                >
+                  <SiLinkedin />
+                </a>
+              )}
+              {github && (
+                <a
+                  href={`https://${github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-github"
+                >
+                  <SiGithub className="hero-icon" />
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

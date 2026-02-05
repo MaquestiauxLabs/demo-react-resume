@@ -13,6 +13,27 @@
   --color-primary-700: #0369a1;
   --color-primary-800: #075985;
   --color-primary-900: #0c4a6e;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-black: #000000;
+  --text-size-name: 2.25rem;
+  --text-line-name: 2.5rem;
+  --text-size-title: 1.25rem;
+  --text-line-title: 1.75rem;
+  --text-size-tagline: 0.875rem;
+  --text-line-tagline: 1.25rem;
+  --text-size-meta: 1.125rem;
+  --text-line-meta: 1.75rem;
+  --text-size-name-lg: 3rem;
+  --text-line-name-lg: 1;
+  --text-size-title-lg: 1.5rem;
+  --text-line-title-lg: 2rem;
+  --text-size-tagline-lg: 1.125rem;
+  --text-line-tagline-lg: 1.75rem;
 }
 
 @layer base {
@@ -40,103 +61,104 @@
     position: relative;
     overflow: hidden;
 
-    & .hero-content {
+    .hero-content {
       position: relative;
       z-index: 10;
       padding: 1rem 1.5rem;
     }
 
-    & .hero-card {
+    .hero-card {
       text-align: center;
-      background-color: rgb(240 249 255 / 0.7);
+      background-color: var(--color-primary-50) / 0.7;
       padding: 2rem;
       box-shadow:
-        0 10px 15px -3px rgb(0 0 0 / 0.1),
-        0 4px 6px -4px rgb(0 0 0 / 0.1);
+        0 10px 15px -3px var(--color-black, #000) / 0.1,
+        0 4px 6px -4px var(--color-black, #000) / 0.1;
     }
 
-    & .hero-name {
-      font-size: 2.25rem;
-      line-height: 2.5rem;
+    .hero-name {
+      font-size: var(--text-size-name);
+      line-height: var(--text-line-name);
       font-weight: 700;
       margin-bottom: 1rem;
-      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+      filter: drop-shadow(0 10px 8px var(--color-black, #000) / 0.04)
+        drop-shadow(0 4px 3px var(--color-black, #000) / 0.1);
     }
 
-    & .hero-title {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
+    .hero-title {
+      font-size: var(--text-size-title);
+      line-height: var(--text-line-title);
       font-weight: 500;
       margin-bottom: 0.5rem;
     }
 
-    & .hero-tagline {
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      color: rgb(55 65 81);
+    .hero-tagline {
+      font-size: var(--text-size-tagline);
+      line-height: var(--text-line-tagline);
+      color: var(--color-gray-700);
       margin-bottom: 1.5rem;
     }
 
-    & .hero-meta {
+    .hero-meta {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
     }
 
-    & .hero-meta-item {
+    .hero-meta-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      color: rgb(75 85 99);
+      font-size: var(--text-size-meta);
+      line-height: var(--text-line-meta);
+      color: var(--color-gray-600);
     }
 
-    & .hero-meta-phone {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      color: rgb(75 85 99);
+    .hero-meta-phone {
+      font-size: var(--text-size-meta);
+      line-height: var(--text-line-meta);
+      color: var(--color-gray-600);
     }
 
-    & .hero-linkedin {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      color: rgb(37 99 235);
+    .hero-socials {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .hero-linkedin {
+      font-size: var(--text-size-meta);
+      line-height: var(--text-line-meta);
+      color: var(--color-blue-600);
       text-decoration: none;
     }
 
-    & .hero-github {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      color: rgb(31 41 55);
+    .hero-github {
+      font-size: var(--text-size-meta);
+      line-height: var(--text-line-meta);
+      color: var(--color-gray-800);
       text-decoration: none;
     }
 
-    & .hero-icon {
-      color: rgb(59 130 246);
-    }
-
-    & .hero-linkedin:hover,
-    & .hero-github:hover {
-      text-decoration: underline;
+    .hero-icon {
+      color: var(--color-blue-500);
     }
 
     @media (min-width: 768px) {
-      & .hero-name {
-        font-size: 3rem;
-        line-height: 1;
+      .hero-name {
+        font-size: var(--text-size-name-lg);
+        line-height: var(--text-line-name-lg);
       }
 
-      & .hero-title {
-        font-size: 1.5rem;
-        line-height: 2rem;
+      .hero-title {
+        font-size: var(--text-size-title-lg);
+        line-height: var(--text-line-title-lg);
       }
 
-      & .hero-tagline {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
+      .hero-tagline {
+        font-size: var(--text-size-tagline-lg);
+        line-height: var(--text-line-tagline-lg);
       }
     }
   }
