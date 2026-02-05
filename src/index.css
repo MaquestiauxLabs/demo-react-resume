@@ -20,29 +20,17 @@
   --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb;
   --color-black: #000000;
-  --text-size-name: 2.25rem;
-  --text-line-name: 2.5rem;
-  --text-size-title: 1.25rem;
-  --text-line-title: 1.75rem;
-  --text-size-tagline: 0.875rem;
-  --text-line-tagline: 1.25rem;
-  --text-size-meta: 1.125rem;
-  --text-line-meta: 1.75rem;
-  --text-size-name-lg: 3rem;
-  --text-line-name-lg: 1;
-  --text-size-title-lg: 1.5rem;
-  --text-line-title-lg: 2rem;
-  --text-size-tagline-lg: 1.125rem;
-  --text-line-tagline-lg: 1.75rem;
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
 @layer base {
   body {
-    margin: 0;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
+    background-color: var(--color-primary-00);
   }
 
   h1,
@@ -62,104 +50,76 @@
     overflow: hidden;
 
     .hero-content {
-      position: relative;
-      z-index: 10;
-      padding: 1rem 1.5rem;
+      @apply relative z-10 py-4 px-6;
     }
 
     .hero-card {
-      text-align: center;
-      background-color: var(--color-primary-50) / 0.7;
-      padding: 2rem;
-      box-shadow:
-        0 10px 15px -3px var(--color-black, #000) / 0.1,
-        0 4px 6px -4px var(--color-black, #000) / 0.1;
+      @apply text-center p-8 bg-primary-50 shadow-lg;
     }
 
     .hero-name {
-      font-size: var(--text-size-name);
-      line-height: var(--text-line-name);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 10px 8px var(--color-black, #000) / 0.04)
-        drop-shadow(0 4px 3px var(--color-black, #000) / 0.1);
+      @apply text-4xl font-bold mb-4 leading-tight;
+      filter: drop-shadow(0 10px 8px var(--shadow-light))
+        drop-shadow(0 4px 3px var(--shadow));
     }
 
     .hero-title {
-      font-size: var(--text-size-title);
-      line-height: var(--text-line-title);
-      font-weight: 500;
-      margin-bottom: 0.5rem;
+      @apply text-xl font-medium mb-2 leading-relaxed;
     }
 
     .hero-tagline {
-      font-size: var(--text-size-tagline);
-      line-height: var(--text-line-tagline);
-      color: var(--color-gray-700);
-      margin-bottom: 1.5rem;
+      @apply text-sm leading-relaxed text-gray-700 mb-6;
     }
 
     .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+      @apply flex flex-wrap justify-center gap-6;
     }
 
     .hero-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: var(--text-size-meta);
-      line-height: var(--text-line-meta);
-      color: var(--color-gray-600);
+      @apply flex items-center gap-2 text-lg leading-relaxed text-gray-600;
     }
 
     .hero-meta-phone {
-      font-size: var(--text-size-meta);
-      line-height: var(--text-line-meta);
-      color: var(--color-gray-600);
+      @apply text-lg leading-relaxed text-gray-600;
     }
 
     .hero-socials {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
+      @apply flex gap-2 justify-center;
     }
 
     .hero-linkedin {
-      font-size: var(--text-size-meta);
-      line-height: var(--text-line-meta);
-      color: var(--color-blue-600);
-      text-decoration: none;
+      @apply text-lg leading-relaxed text-blue-600 no-underline;
     }
 
     .hero-github {
-      font-size: var(--text-size-meta);
-      line-height: var(--text-line-meta);
-      color: var(--color-gray-800);
-      text-decoration: none;
+      @apply text-lg leading-relaxed text-gray-800 no-underline;
     }
 
     .hero-icon {
-      color: var(--color-blue-500);
+      @apply text-blue-500;
     }
 
     @media (min-width: 768px) {
       .hero-name {
-        font-size: var(--text-size-name-lg);
-        line-height: var(--text-line-name-lg);
+        @apply text-5xl leading-none;
       }
 
       .hero-title {
-        font-size: var(--text-size-title-lg);
-        line-height: var(--text-line-title-lg);
+        @apply text-2xl leading-loose;
       }
 
       .hero-tagline {
-        font-size: var(--text-size-tagline-lg);
-        line-height: var(--text-line-tagline-lg);
+        @apply text-lg leading-relaxed;
       }
+    }
+  }
+
+  .about-me {
+    @apply py-4 px-6;
+
+    .about-me-content {
+      @apply text-lg leading-relaxed text-gray-700 mb-6;
+      text-align: justify;
     }
   }
 }

@@ -7,4 +7,5 @@ export interface PersonalInfo {
   linkedin?: string;
   github?: string;
   tagline?: string;
+  about?: string;
 }
