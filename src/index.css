@@ -163,32 +163,37 @@
     .skills-header {
       @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
     }
-    .skill-category-name {
-      @apply text-xl font-semibold leading-relaxed text-center text-indigo-600;
-    }
-    .skill-name {
-      @apply text-slate-700 text-sm font-medium;
+    .skill-category {
+      .skill-category-name {
+        @apply text-xl font-semibold leading-relaxed text-center text-indigo-600;
+      }
     }
     .skills-list {
       @apply mb-4 mt-4;
     }
     .skill-item {
       @apply text-slate-700 text-sm font-medium flex gap-2 justify-between;
-    }
-    .skill-level-5 {
-      @apply flex text-amber-500;
-    }
-    .skill-level-4 {
-      @apply flex text-yellow-600;
-    }
-    .skill-level-3 {
-      @apply flex text-blue-500;
-    }
-    .skill-level-2 {
-      @apply flex text-cyan-600;
-    }
-    .skill-level-1 {
-      @apply flex text-indigo-500;
+      .skill-name {
+        @apply text-slate-700 text-sm font-medium;
+      }
+      .skill-stars {
+        @apply flex;
+        .skill-level-5 {
+          @apply flex text-amber-500;
+        }
+        .skill-level-4 {
+          @apply flex text-yellow-600;
+        }
+        .skill-level-3 {
+          @apply flex text-blue-500;
+        }
+        .skill-level-2 {
+          @apply flex text-cyan-600;
+        }
+        .skill-level-1 {
+          @apply flex text-indigo-500;
+        }
+      }
     }
   }
 }
