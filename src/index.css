@@ -106,6 +106,51 @@
     }
   }
 
+  .educations {
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6 border border-amber-100;
+    .educations-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
+    .educations-list {
+      @apply mb-4 mt-4;
+      .education-item {
+        @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
+        .education-item-header {
+          @apply flex justify-between items-center mb-2;
+          .education-item-logo {
+            @apply w-12 h-12 bg-linear-to-br from-primary-500 to-primary-200 rounded-full flex items-center justify-center text-black text-lg font-bold;
+          }
+          .education-item-degree {
+            @apply text-lg font-semibold text-gray-800;
+          }
+          .education-item-institution {
+            @apply text-sm text-gray-600;
+          }
+          .education-item-duration {
+            @apply text-sm text-gray-600 flex justify-end;
+          }
+          .education-item-location {
+            @apply text-sm text-gray-600 flex justify-end items-center gap-2;
+          }
+        }
+        .education-item-achievements {
+          .education-item-achievements-title {
+            @apply text-base font-semibold text-gray-700;
+          }
+          .education-item-achievements-list {
+            @apply flex flex-col gap-2 mt-4;
+            .education-item-achievements {
+              @apply text-sm text-gray-700 flex items-start gap-2;
+              .education-item-achievements-bullet {
+                @apply w-2 h-2 bg-linear-to-br from-accent-400 to-accent-600 rounded-full mt-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .experiences {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6 border border-amber-100;
     .experiences-header {
@@ -163,32 +208,37 @@
     .skills-header {
       @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
     }
-    .skill-category-name {
-      @apply text-xl font-semibold leading-relaxed text-center text-indigo-600;
-    }
-    .skill-name {
-      @apply text-slate-700 text-sm font-medium;
+    .skill-category {
+      .skill-category-name {
+        @apply text-xl font-semibold leading-relaxed text-center text-indigo-600;
+      }
     }
     .skills-list {
       @apply mb-4 mt-4;
     }
     .skill-item {
       @apply text-slate-700 text-sm font-medium flex gap-2 justify-between;
-    }
-    .skill-level-5 {
-      @apply flex text-amber-500;
-    }
-    .skill-level-4 {
-      @apply flex text-yellow-600;
-    }
-    .skill-level-3 {
-      @apply flex text-blue-500;
-    }
-    .skill-level-2 {
-      @apply flex text-cyan-600;
-    }
-    .skill-level-1 {
-      @apply flex text-indigo-500;
+      .skill-name {
+        @apply text-slate-700 text-sm font-medium;
+      }
+      .skill-stars {
+        @apply flex;
+        .skill-level-5 {
+          @apply flex text-amber-500;
+        }
+        .skill-level-4 {
+          @apply flex text-yellow-600;
+        }
+        .skill-level-3 {
+          @apply flex text-blue-500;
+        }
+        .skill-level-2 {
+          @apply flex text-cyan-600;
+        }
+        .skill-level-1 {
+          @apply flex text-indigo-500;
+        }
+      }
     }
   }
 }

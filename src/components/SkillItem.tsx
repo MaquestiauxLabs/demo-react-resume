@@ -24,10 +24,12 @@ const SkillItem: React.FC<SkillItemProps> = ({ name, level }) => {
   return (
     <div key={name} className="skill-item">
       <div className="skill-name">{name}</div>
-      <div title={level} className={`skill-level-${getSkillLevel(level)}`}>
-        {[...Array(getSkillLevel(level))].map((_, index) => (
-          <HiStar key={index} />
-        ))}
+      <div className="skill-stars">
+        <div title={level} className={`skill-level-${getSkillLevel(level)}`}>
+          {[...Array(getSkillLevel(level))].map((_, index) => (
+            <HiStar key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
