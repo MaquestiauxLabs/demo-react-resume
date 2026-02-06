@@ -32,6 +32,12 @@
       "@interfaces/*": [
         "./src/interfaces/*"
       ],
+      "@constants": [
+        "./src/constants"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
       "@providers/*": [
         "./src/providers/*"
       ]

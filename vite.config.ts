@@ -12,6 +12,7 @@ export default defineConfig({
       '@helpers': '/src/helpers',
       '@hooks': '/src/hooks',
       '@interfaces': '/src/interfaces',
+      '@constants': '/src/constants',
       '@providers': '/src/providers',
     },
   },

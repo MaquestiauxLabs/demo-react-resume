@@ -1,0 +1,20 @@
+[
+    {
+        "name": "English",
+        "isocode": "EN",
+        "level": "B2",
+        "motherTongue": false
+    },
+    {
+        "name": "Spanish",
+        "isocode": "ES",
+        "level": "A2",
+        "motherTongue": false
+    },
+    {
+        "name": "French",
+        "isocode": "FR",
+        "level": "C1",
+        "motherTongue": true
+    }
+]
