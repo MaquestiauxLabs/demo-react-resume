@@ -204,7 +204,7 @@
   }
 
   .languages {
-    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg m-6 border border-amber-100;
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6  border border-amber-100;
     .languages-header {
       @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
     }
@@ -214,6 +214,30 @@
         @apply relative w-64 p-5 border border-slate-800 rounded-2xl shadow-xl;
         .language-item-top-row {
           @apply flex justify-between items-start mb-6;
+          .language-item-flag {
+            @apply w-10 h-7 flex items-center justify-center text-2xl;
+          }
+          .language-item-name {
+            @apply mb-6 text-xl font-bold;
+          }
+          .language-item-level {
+            @apply px-2 py-1 rounded-md bg-blue-500/10 text-blue-600 text-xs font-bold tracking-wider border border-blue-500/20;
+          }
+        }
+        .language-item-proficiency {
+          @apply flex gap-1.5 h-1.5;
+          .language-item-proficiency-bar {
+            @apply flex-1 rounded-full transition-all duration-500;
+            &.active {
+              @apply bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)];
+            }
+            &.inactive {
+              @apply bg-slate-800;
+            }
+          }
+        }
+        .language-item-mother-tongue {
+          @apply text-xs font-semibold text-green-600  py-1 mt-4 text-right;
         }
       }
     }
