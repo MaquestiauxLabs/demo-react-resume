@@ -4,7 +4,12 @@ import Experiences from '@components/Experiences';
 import Languages from '@components/Languages';
 import Skills from '@components/Skills';
 import Trainings from '@components/Trainings';
-import type { Education, Experience, SkillCategory } from '@interfaces';
+import type {
+  Education,
+  Experience,
+  SkillCategory,
+  Training,
+} from '@interfaces';
 import type { Language } from '@interfaces/languages';
 import type React from 'react';
 import './App.css';
@@ -15,6 +20,7 @@ import {
   languages,
   personalInfo,
   skills,
+  trainings,
 } from './data';
 
 const App: React.FC = () => {
@@ -29,7 +35,7 @@ const App: React.FC = () => {
         <div className="md:col-span-2">
           <Experiences experiences={experiences as Experience[]} />
           <Languages languages={languages as Language[]} />
-          <Trainings />
+          <Trainings trainings={trainings as Training[]} />
           <Educations education={educations as Education[]} />
         </div>
       </div>
