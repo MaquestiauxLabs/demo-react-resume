@@ -203,6 +203,35 @@
     }
   }
 
+  .trainings {
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6  border border-amber-100;
+    .trainings-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
+    .trainings-list {
+      @apply mb-4 mt-4 grid grid-cols-2 gap-2;
+      .training-item {
+        @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
+        .training-meta {
+          @apply flex justify-between items-center mb-2;
+
+          .training-issuer {
+            @apply text-sm text-gray-600 flex;
+          }
+          .training-date {
+            @apply text-sm text-gray-600 flex;
+          }
+        }
+        .training-name {
+          @apply text-lg font-semibold text-gray-800 flex;
+        }
+        .training-description {
+          @apply text-sm text-gray-700 mt-2;
+        }
+      }
+    }
+  }
+
   .languages {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6  border border-amber-100;
     .languages-header {
