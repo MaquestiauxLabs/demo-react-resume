@@ -203,6 +203,22 @@
     }
   }
 
+  .languages {
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg m-6 border border-amber-100;
+    .languages-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
+    .languages-list {
+      @apply mb-4 mt-4 flex gap-4 flex-wrap justify-center;
+      .language-item {
+        @apply relative w-64 p-5 border border-slate-800 rounded-2xl shadow-xl;
+        .language-item-top-row {
+          @apply flex justify-between items-start mb-6;
+        }
+      }
+    }
+  }
+
   .skills {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg m-6 border border-amber-100;
     .skills-header {
