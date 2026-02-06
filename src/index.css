@@ -203,6 +203,13 @@
     }
   }
 
+  .trainings {
+    @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6  border border-amber-100;
+    .trainings-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
+  }
+
   .languages {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg mt-6 mr-6  border border-amber-100;
     .languages-header {
