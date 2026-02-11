@@ -6,6 +6,7 @@ interface AboutMeProps extends PersonalInfo {}
 const AboutMe: React.FC<AboutMeProps> = ({ about }) => {
   return (
     <div className="about-me">
+      <div className="about-me-header">About Me</div>
       <div className="about-me-content">{about}</div>
     </div>
   );

@@ -103,6 +103,9 @@
 
   .about-me {
     @apply py-4 px-6 bg-linear-to-br from-amber-50 to-indigo-50 rounded-lg shadow-lg m-6 border border-amber-100;
+    .about-me-header {
+      @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
+    }
     .about-me-content {
       @apply text-justify leading-relaxed text-slate-700 mb-6;
     }
