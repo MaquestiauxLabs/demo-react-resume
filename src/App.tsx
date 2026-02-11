@@ -1,6 +1,7 @@
 import AboutMe from '@components/AboutMe';
 import Educations from '@components/Educations';
 import Experiences from '@components/Experiences';
+import Footer from '@components/Footer';
 import Languages from '@components/Languages';
 import Skills from '@components/Skills';
 import Trainings from '@components/Trainings';
@@ -39,7 +40,7 @@ const App: React.FC = () => {
           <Educations education={educations as Education[]} />
         </div>
       </div>
-      <div>FOOTER</div>
+      <Footer {...personalInfo} />
     </div>
   );
 };
