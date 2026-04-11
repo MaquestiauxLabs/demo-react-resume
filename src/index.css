@@ -273,6 +273,9 @@
         .training-item-top {
           @apply flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
         }
+        .training-item-meta {
+          @apply flex items-center;
+        }
         .training-item-icon {
           @apply mt-1 shrink-0 text-blue-500;
         }
@@ -282,8 +285,20 @@
         .training-date {
           @apply inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700;
         }
+        .training-issuer-row {
+          @apply mt-3 flex flex-wrap items-center justify-between gap-2;
+        }
         .training-issuer {
-          @apply mt-3 flex items-start gap-2 text-sm leading-snug text-gray-600;
+          @apply flex items-start gap-2 text-sm leading-snug text-gray-600;
+        }
+        .training-mode {
+          @apply inline-flex w-fit items-center rounded-full px-2 py-0.5 text-[11px] font-medium leading-none;
+          &.training-mode-self {
+            @apply bg-indigo-50 text-indigo-700 border border-indigo-200;
+          }
+          &.training-mode-organized {
+            @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+          }
         }
         .training-description {
           @apply mt-3 rounded-md bg-slate-50 px-3 py-2 text-sm font-medium wrap-break-word text-slate-700;

@@ -9,15 +9,22 @@ const TrainingItem: React.FC<Training> = (training) => {
           <HiAcademicCap className="training-item-icon" />
           <span>{training.name}</span>
         </div>
-        <div className="training-date">
-          <HiCalendar className="training-item-icon" />
-          <span>{training.date}</span>
+        <div className="training-item-meta">
+          <div className="training-date">
+            <HiCalendar className="training-item-icon" />
+            <span>{training.date}</span>
+          </div>
         </div>
       </div>
 
-      <div className="training-issuer">
-        <HiOfficeBuilding className="training-item-icon" />
-        <span>{training.issuer}</span>
+      <div className="training-issuer-row">
+        <div className="training-issuer">
+          <HiOfficeBuilding className="training-item-icon" />
+          <span>{training.issuer}</span>
+        </div>
+        {training.selfTrained && (
+          <div className="training-mode training-mode-self">Self-trained</div>
+        )}
       </div>
 
       {training.description && (

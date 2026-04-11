@@ -3,5 +3,6 @@ export interface Training {
   name: string;
   issuer: string;
   date: string;
+  selfTrained: boolean;
   description?: string;
 }
