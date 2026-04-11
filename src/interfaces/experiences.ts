@@ -5,5 +5,6 @@ export interface Experience {
   endDate: string | null;
   location: string;
   responsibilities: string[];
-  technologies?: string[];
+  skillIds?: string[];
+  otherTechnologies?: string[];
 }

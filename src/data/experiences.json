@@ -12,17 +12,16 @@
       "Mentor team of 15 architects and senior developers across 8 EU member states",
       "Ensure compliance with GDPR, NIS2 Directive, and EU cybersecurity frameworks"
     ],
-    "technologies": [
-      "Kubernetes",
-      "Docker",
-      "Istio",
-      "GraphQL",
-      "Spring Boot",
-      "Node.js",
-      "React",
-      "AWS",
-      "Azure"
-    ]
+    "skillIds": [
+      "9c0d1e2f-3a4b-4c5d-8e6f-7a8b9c0d1e2f",
+      "5d6e7f8a-9b0c-4d1e-8f2a-3b4c5d6e7f8a",
+      "9f0a1b2c-3d4e-4f5a-8b6c-7d8e9f0a1b2c",
+      "1b2c3d4e-5f6a-4b7c-8d8e-9f0a1b2c3d4e",
+      "5a6b7c8d-9e0f-4a1b-8c2d-3e4f5a6b7c8d",
+      "3e7c1a4b-8f2d-4e5a-9b6c-0d1e2f3a4b5c",
+      "7f8a9b0c-1d2e-4f3a-8b5c-6d7e8f9a0b1c"
+    ],
+    "otherTechnologies": ["Istio", "GraphQL"]
   },
   {
     "company": "BNP Paribas - Corporate & Investment Banking",
@@ -37,13 +36,16 @@
       "Architected fraud detection systems using machine learning and big data technologies",
       "Managed technology risk assessment and compliance with Basel III and MiFID II regulations"
     ],
-    "technologies": [
-      "Java EE",
-      "Microservices",
+    "skillIds": [
+      "1e2f3a4b-5c6d-4e7f-8a8b-9c0d1e2f3a4b",
+      "5d6e7f8a-9b0c-4d1e-8f2a-3b4c5d6e7f8a",
+      "6f7a8b9c-0d1e-4f2a-8b3c-4d5e6f7a8b9c",
+      "9b0c1d2e-3f4a-4b5c-8d6e-7f8a9b0c1d2e"
+    ],
+    "otherTechnologies": [
       "Apache Kafka",
       "Elasticsearch",
       "MongoDB",
-      "Docker",
       "Jenkins",
       "Splunk"
     ]
@@ -60,16 +62,14 @@
       "Led cross-functional teams in agile development methodologies",
       "Implemented enterprise integration patterns using SAP and custom middleware"
     ],
-    "technologies": [
-      "C#",
-      ".NET",
-      "WCF",
-      "SAP PI/PO",
-      "MQTT",
-      "OPC UA",
-      "SQL Server",
-      "Azure"
-    ]
+    "skillIds": [
+      "0c1d2e3f-4a5b-4c6d-8e7f-8a9b0c1d2e3f",
+      "8c9d0e1f-2a3b-4c4d-8e5f-6a7b8c9d0e1f",
+      "2e3f4a5b-6c7d-4e8f-8a9b-0c1d2e3f4a5b",
+      "7f8a9b0c-1d2e-4f3a-8b5c-6d7e8f9a0b1c",
+      "1d2e3f4a-5b6c-4d7e-8f8a-9b0c1d2e3f4a"
+    ],
+    "otherTechnologies": ["WCF", "SAP PI/PO", "MQTT", "OPC UA"]
   },
   {
     "company": "Capgemini Consulting",
@@ -83,14 +83,12 @@
       "Led system integration projects merging legacy systems with modern architectures",
       "Conducted technology assessments and roadmap planning for C-level executives"
     ],
-    "technologies": [
-      "J2EE",
-      "Oracle",
-      "IBM WebSphere",
-      "SOA",
-      "Web Services",
-      "UML",
-      "Rational Tools"
-    ]
+    "skillIds": [
+      "1e2f3a4b-5c6d-4e7f-8a8b-9c0d1e2f3a4b",
+      "2e3f4a5b-6c7d-4e8f-8a9b-0c1d2e3f4a5b",
+      "1d2e3f4a-5b6c-4d7e-8f8a-9b0c1d2e3f4a",
+      "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f"
+    ],
+    "otherTechnologies": ["IBM WebSphere", "UML", "Rational Tools"]
   }
 ]

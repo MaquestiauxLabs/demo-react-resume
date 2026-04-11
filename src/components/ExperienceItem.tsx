@@ -1,6 +1,11 @@
 import type { Experience } from '@interfaces';
 import React from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
+import skillsData from '../data/skills.json';
+
+const skillMap = new Map<string, string>(
+  skillsData.flatMap((cat) => cat.skills.map((s) => [s.id, s.name])),
+);
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('en-GB', {
   day: '2-digit',
@@ -54,13 +59,25 @@ const ExperienceItem: React.FC<Experience> = (experience) => {
           </div>
         ))}
       </div>
-      {experience.technologies && (
+      {(experience.skillIds?.length ||
+        experience.otherTechnologies?.length) && (
         <div className="experience-item-technologies">
           <div className="experience-item-technology-title">Technologies:</div>
           <div className="experience-item-technology-list">
-            {experience.technologies.map((technology, index) => (
-              <div key={index} className="experience-item-technology">
-                {technology}
+            {experience.skillIds?.map((id) => (
+              <div
+                key={id}
+                className="experience-item-technology experience-item-technology--skill"
+              >
+                {skillMap.get(id) ?? id}
+              </div>
+            ))}
+            {experience.otherTechnologies?.map((tech, i) => (
+              <div
+                key={i}
+                className="experience-item-technology experience-item-technology--skill"
+              >
+                {tech}
               </div>
             ))}
           </div>

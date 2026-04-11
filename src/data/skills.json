@@ -2,45 +2,141 @@
   {
     "category": "Cloud & Infrastructure",
     "skills": [
-      { "name": "AWS", "level": "expert", "months": 96 },
-      { "name": "Azure", "level": "expert", "months": 144 },
-      { "name": "Google Cloud", "level": "advanced", "months": 48 },
-      { "name": "Kubernetes", "level": "expert", "months": 84 },
-      { "name": "Docker", "level": "expert", "months": 108 },
-      { "name": "Terraform", "level": "advanced", "months": 36 }
+      {
+        "id": "3e7c1a4b-8f2d-4e5a-9b6c-0d1e2f3a4b5c",
+        "name": "AWS",
+        "level": "expert"
+      },
+      {
+        "id": "7f8a9b0c-1d2e-4f3a-8b5c-6d7e8f9a0b1c",
+        "name": "Azure",
+        "level": "expert"
+      },
+      {
+        "id": "2a3b4c5d-6e7f-4a8b-9c0d-1e2f3a4b5c6d",
+        "name": "Google Cloud",
+        "level": "advanced"
+      },
+      {
+        "id": "9c0d1e2f-3a4b-4c5d-8e6f-7a8b9c0d1e2f",
+        "name": "Kubernetes",
+        "level": "expert"
+      },
+      {
+        "id": "5d6e7f8a-9b0c-4d1e-8f2a-3b4c5d6e7f8a",
+        "name": "Docker",
+        "level": "expert"
+      },
+      {
+        "id": "b1c2d3e4-f5a6-4b7c-8d8e-9f0a1b2c3d4e",
+        "name": "Terraform",
+        "level": "advanced"
+      }
     ]
   },
   {
     "category": "Programming Languages",
     "skills": [
-      { "name": "Java", "level": "expert", "months": 216 },
-      { "name": "TypeScript/JavaScript", "level": "expert", "months": 132 },
-      { "name": "Python", "level": "advanced", "months": 72 },
-      { "name": "C#", "level": "advanced", "months": 96 },
-      { "name": "Go", "level": "intermediate", "months": 24 },
-      { "name": "SQL", "level": "expert", "months": 276 }
+      {
+        "id": "1e2f3a4b-5c6d-4e7f-8a8b-9c0d1e2f3a4b",
+        "name": "Java",
+        "level": "expert"
+      },
+      {
+        "id": "8a9b0c1d-2e3f-4a5b-8c6d-7e8f9a0b1c2d",
+        "name": "TypeScript/JavaScript",
+        "level": "expert"
+      },
+      {
+        "id": "4b5c6d7e-8f9a-4b0c-8d1e-2f3a4b5c6d7e",
+        "name": "Python",
+        "level": "advanced"
+      },
+      {
+        "id": "0c1d2e3f-4a5b-4c6d-8e7f-8a9b0c1d2e3f",
+        "name": "C#",
+        "level": "advanced"
+      },
+      {
+        "id": "6d7e8f9a-0b1c-4d2e-8f3a-4b5c6d7e8f9a",
+        "name": "Go",
+        "level": "intermediate"
+      },
+      {
+        "id": "2e3f4a5b-6c7d-4e8f-8a9b-0c1d2e3f4a5b",
+        "name": "SQL",
+        "level": "expert"
+      }
     ]
   },
   {
     "category": "Frameworks & Platforms",
     "skills": [
-      { "name": "Spring Boot", "level": "expert", "months": 144 },
-      { "name": "React", "level": "advanced", "months": 72 },
-      { "name": "Node.js", "level": "expert", "months": 108 },
-      { "name": ".NET Core", "level": "advanced", "months": 96 },
-      { "name": "Angular", "level": "intermediate", "months": 36 },
-      { "name": "Hibernate", "level": "expert", "months": 180 }
+      {
+        "id": "9f0a1b2c-3d4e-4f5a-8b6c-7d8e9f0a1b2c",
+        "name": "Spring Boot",
+        "level": "expert"
+      },
+      {
+        "id": "5a6b7c8d-9e0f-4a1b-8c2d-3e4f5a6b7c8d",
+        "name": "React",
+        "level": "advanced"
+      },
+      {
+        "id": "1b2c3d4e-5f6a-4b7c-8d8e-9f0a1b2c3d4e",
+        "name": "Node.js",
+        "level": "expert"
+      },
+      {
+        "id": "8c9d0e1f-2a3b-4c4d-8e5f-6a7b8c9d0e1f",
+        "name": ".NET Core",
+        "level": "advanced"
+      },
+      {
+        "id": "4d5e6f7a-8b9c-4d0e-8f1a-2b3c4d5e6f7a",
+        "name": "Angular",
+        "level": "intermediate"
+      },
+      {
+        "id": "0e1f2a3b-4c5d-4e6f-8a7b-8c9d0e1f2a3b",
+        "name": "Hibernate",
+        "level": "expert"
+      }
     ]
   },
   {
     "category": "Architecture & Design",
     "skills": [
-      { "name": "Microservices", "level": "expert", "months": 120 },
-      { "name": "Domain-Driven Design", "level": "expert", "months": 156 },
-      { "name": "Event-Driven Architecture", "level": "expert", "months": 96 },
-      { "name": "API Design", "level": "expert", "months": 168 },
-      { "name": "System Integration", "level": "expert", "months": 268 },
-      { "name": "Security Architecture", "level": "advanced", "months": 84 }
+      {
+        "id": "6f7a8b9c-0d1e-4f2a-8b3c-4d5e6f7a8b9c",
+        "name": "Microservices",
+        "level": "expert"
+      },
+      {
+        "id": "3a4b5c6d-7e8f-4a9b-8c0d-1e2f3a4b5c6d",
+        "name": "Domain-Driven Design",
+        "level": "expert"
+      },
+      {
+        "id": "9b0c1d2e-3f4a-4b5c-8d6e-7f8a9b0c1d2e",
+        "name": "Event-Driven Architecture",
+        "level": "expert"
+      },
+      {
+        "id": "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f",
+        "name": "API Design",
+        "level": "expert"
+      },
+      {
+        "id": "1d2e3f4a-5b6c-4d7e-8f8a-9b0c1d2e3f4a",
+        "name": "System Integration",
+        "level": "expert"
+      },
+      {
+        "id": "7e8f9a0b-1c2d-4e3f-8a4b-5c6d7e8f9a0b",
+        "name": "Security Architecture",
+        "level": "advanced"
+      }
     ]
   }
 ]
