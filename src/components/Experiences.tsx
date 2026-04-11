@@ -1,7 +1,8 @@
 import type { Experience } from '@interfaces';
-import { PAGINATION_DEFAULTS, getPaginationTokens } from '@constants';
+import { PAGINATION_DEFAULTS } from '@constants';
 import React from 'react';
 import ExperienceItem from './ExperienceItem';
+import PaginationNav from './PaginationNav';
 
 interface ExperiencesProps {
   experiences: Experience[];
@@ -28,12 +29,6 @@ const Experiences: React.FC<ExperiencesProps> = ({
     currentPage * itemsPerPage,
   );
 
-  const pageTokens = getPaginationTokens(
-    currentPage,
-    totalPages,
-    ellipsisThreshold,
-  );
-
   return (
     <div className="experiences">
       <div className="experiences-header">Experiences</div>
@@ -43,77 +38,13 @@ const Experiences: React.FC<ExperiencesProps> = ({
         ))}
       </div>
 
-      {totalPages > 1 && (
-        <div className="experiences-pagination">
-          <div className="experiences-pagination-summary">
-            Page {currentPage} / {totalPages}
-          </div>
-          <div className="experiences-pagination-nav">
-            <button
-              type="button"
-              className="experiences-pagination-arrow"
-              onClick={() => setCurrentPage(1)}
-              disabled={currentPage === 1}
-              aria-label="Go to first page"
-            >
-              «
-            </button>
-            <button
-              type="button"
-              className="experiences-pagination-arrow"
-              onClick={() => setCurrentPage((page) => Math.max(page - 1, 1))}
-              disabled={currentPage === 1}
-              aria-label="Go to previous page"
-            >
-              ←
-            </button>
-
-            {pageTokens.map((token) =>
-              typeof token === 'number' ? (
-                <button
-                  key={token}
-                  type="button"
-                  className={`experiences-pagination-page ${token === currentPage ? 'active' : ''}`}
-                  onClick={() => setCurrentPage(token)}
-                  aria-label={`Go to page ${token}`}
-                  aria-current={token === currentPage ? 'page' : undefined}
-                >
-                  {token}
-                </button>
-              ) : (
-                <span
-                  key={token}
-                  className="experiences-pagination-ellipsis"
-                  aria-hidden="true"
-                >
-                  ...
-                </span>
-              ),
-            )}
-
-            <button
-              type="button"
-              className="experiences-pagination-arrow"
-              onClick={() =>
-                setCurrentPage((page) => Math.min(page + 1, totalPages))
-              }
-              disabled={currentPage === totalPages}
-              aria-label="Go to next page"
-            >
-              →
-            </button>
-            <button
-              type="button"
-              className="experiences-pagination-arrow"
-              onClick={() => setCurrentPage(totalPages)}
-              disabled={currentPage === totalPages}
-              aria-label="Go to last page"
-            >
-              »
-            </button>
-          </div>
-        </div>
-      )}
+      <PaginationNav
+        variant="experiences"
+        currentPage={currentPage}
+        totalPages={totalPages}
+        ellipsisThreshold={ellipsisThreshold}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };

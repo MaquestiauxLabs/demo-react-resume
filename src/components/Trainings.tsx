@@ -1,6 +1,7 @@
 import type { Training } from '@interfaces';
-import { PAGINATION_DEFAULTS, getPaginationTokens } from '@constants';
+import { PAGINATION_DEFAULTS } from '@constants';
 import React from 'react';
+import PaginationNav from './PaginationNav';
 import TrainingItem from './TrainingItem';
 
 interface TrainingProps {
@@ -28,12 +29,6 @@ const Trainings: React.FC<TrainingProps> = ({
     currentPage * itemsPerPage,
   );
 
-  const pageTokens = getPaginationTokens(
-    currentPage,
-    totalPages,
-    ellipsisThreshold,
-  );
-
   return (
     <div className="trainings">
       <div className="trainings-header">Trainings</div>
@@ -43,77 +38,13 @@ const Trainings: React.FC<TrainingProps> = ({
         ))}
       </div>
 
-      {totalPages > 1 && (
-        <div className="trainings-pagination">
-          <div className="trainings-pagination-summary">
-            Page {currentPage} / {totalPages}
-          </div>
-          <div className="trainings-pagination-nav">
-            <button
-              type="button"
-              className="trainings-pagination-arrow"
-              onClick={() => setCurrentPage(1)}
-              disabled={currentPage === 1}
-              aria-label="Go to first page"
-            >
-              «
-            </button>
-            <button
-              type="button"
-              className="trainings-pagination-arrow"
-              onClick={() => setCurrentPage((page) => Math.max(page - 1, 1))}
-              disabled={currentPage === 1}
-              aria-label="Go to previous page"
-            >
-              ←
-            </button>
-
-            {pageTokens.map((token) =>
-              typeof token === 'number' ? (
-                <button
-                  key={token}
-                  type="button"
-                  className={`trainings-pagination-page ${token === currentPage ? 'active' : ''}`}
-                  onClick={() => setCurrentPage(token)}
-                  aria-label={`Go to page ${token}`}
-                  aria-current={token === currentPage ? 'page' : undefined}
-                >
-                  {token}
-                </button>
-              ) : (
-                <span
-                  key={token}
-                  className="trainings-pagination-ellipsis"
-                  aria-hidden="true"
-                >
-                  ...
-                </span>
-              ),
-            )}
-
-            <button
-              type="button"
-              className="trainings-pagination-arrow"
-              onClick={() =>
-                setCurrentPage((page) => Math.min(page + 1, totalPages))
-              }
-              disabled={currentPage === totalPages}
-              aria-label="Go to next page"
-            >
-              →
-            </button>
-            <button
-              type="button"
-              className="trainings-pagination-arrow"
-              onClick={() => setCurrentPage(totalPages)}
-              disabled={currentPage === totalPages}
-              aria-label="Go to last page"
-            >
-              »
-            </button>
-          </div>
-        </div>
-      )}
+      <PaginationNav
+        variant="trainings"
+        currentPage={currentPage}
+        totalPages={totalPages}
+        ellipsisThreshold={ellipsisThreshold}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
