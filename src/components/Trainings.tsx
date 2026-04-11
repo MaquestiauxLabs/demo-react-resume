@@ -16,6 +16,7 @@ const Trainings: React.FC<TrainingProps> = ({
   ellipsisThreshold = PAGINATION_DEFAULTS.ellipsisThreshold,
 }) => {
   const [currentPage, setCurrentPage] = React.useState(1);
+  const headerRef = React.useRef<HTMLDivElement>(null);
   const totalPages = Math.max(1, Math.ceil(trainings.length / itemsPerPage));
 
   React.useEffect(() => {
@@ -29,9 +30,20 @@ const Trainings: React.FC<TrainingProps> = ({
     currentPage * itemsPerPage,
   );
 
+  const handlePageChange = React.useCallback(
+    (page: number) => {
+      if (page === currentPage) return;
+      setCurrentPage(page);
+      headerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    },
+    [currentPage],
+  );
+
   return (
     <div className="trainings">
-      <div className="trainings-header">Trainings</div>
+      <div ref={headerRef} className="trainings-header">
+        Trainings
+      </div>
       <div className="trainings-list">
         {pagedTrainings.map((training) => (
           <TrainingItem key={training.id} {...training} />
@@ -43,7 +55,7 @@ const Trainings: React.FC<TrainingProps> = ({
         currentPage={currentPage}
         totalPages={totalPages}
         ellipsisThreshold={ellipsisThreshold}
-        onPageChange={setCurrentPage}
+        onPageChange={handlePageChange}
       />
     </div>
   );

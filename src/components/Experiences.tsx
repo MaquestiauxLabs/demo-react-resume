@@ -16,6 +16,7 @@ const Experiences: React.FC<ExperiencesProps> = ({
   ellipsisThreshold = PAGINATION_DEFAULTS.ellipsisThreshold,
 }) => {
   const [currentPage, setCurrentPage] = React.useState(1);
+  const headerRef = React.useRef<HTMLDivElement>(null);
   const totalPages = Math.max(1, Math.ceil(experiences.length / itemsPerPage));
 
   React.useEffect(() => {
@@ -29,9 +30,20 @@ const Experiences: React.FC<ExperiencesProps> = ({
     currentPage * itemsPerPage,
   );
 
+  const handlePageChange = React.useCallback(
+    (page: number) => {
+      if (page === currentPage) return;
+      setCurrentPage(page);
+      headerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    },
+    [currentPage],
+  );
+
   return (
     <div className="experiences">
-      <div className="experiences-header">Experiences</div>
+      <div ref={headerRef} className="experiences-header">
+        Experiences
+      </div>
       <div className="experiences-list">
         {pagedExperiences.map((exp) => (
           <ExperienceItem key={exp.id} {...exp} />
@@ -43,7 +55,7 @@ const Experiences: React.FC<ExperiencesProps> = ({
         currentPage={currentPage}
         totalPages={totalPages}
         ellipsisThreshold={ellipsisThreshold}
-        onPageChange={setCurrentPage}
+        onPageChange={handlePageChange}
       />
     </div>
   );
