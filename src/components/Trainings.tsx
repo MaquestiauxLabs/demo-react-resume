@@ -7,6 +7,22 @@ interface TrainingProps {
 }
 
 const TRAININGS_PER_PAGE = 6;
+type PaginationToken = number | 'ellipsis-left' | 'ellipsis-right';
+
+const getPaginationTokens = (
+  currentPage: number,
+  totalPages: number,
+): PaginationToken[] => {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  const tokens: PaginationToken[] = [];
+  if (currentPage > 1) tokens.push('ellipsis-left');
+  tokens.push(currentPage);
+  if (currentPage < totalPages) tokens.push('ellipsis-right');
+  return tokens;
+};
 
 const Trainings: React.FC<TrainingProps> = (props) => {
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -26,7 +42,7 @@ const Trainings: React.FC<TrainingProps> = (props) => {
     currentPage * TRAININGS_PER_PAGE,
   );
 
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const pageTokens = getPaginationTokens(currentPage, totalPages);
 
   return (
     <div className="trainings">
@@ -53,18 +69,28 @@ const Trainings: React.FC<TrainingProps> = (props) => {
               ←
             </button>
 
-            {pageNumbers.map((page) => (
-              <button
-                key={page}
-                type="button"
-                className={`trainings-pagination-page ${page === currentPage ? 'active' : ''}`}
-                onClick={() => setCurrentPage(page)}
-                aria-label={`Go to page ${page}`}
-                aria-current={page === currentPage ? 'page' : undefined}
-              >
-                {page}
-              </button>
-            ))}
+            {pageTokens.map((token) =>
+              typeof token === 'number' ? (
+                <button
+                  key={token}
+                  type="button"
+                  className={`trainings-pagination-page ${token === currentPage ? 'active' : ''}`}
+                  onClick={() => setCurrentPage(token)}
+                  aria-label={`Go to page ${token}`}
+                  aria-current={token === currentPage ? 'page' : undefined}
+                >
+                  {token}
+                </button>
+              ) : (
+                <span
+                  key={token}
+                  className="trainings-pagination-ellipsis"
+                  aria-hidden="true"
+                >
+                  ...
+                </span>
+              ),
+            )}
 
             <button
               type="button"

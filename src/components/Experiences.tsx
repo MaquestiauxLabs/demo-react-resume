@@ -7,6 +7,22 @@ interface ExperiencesProps {
 }
 
 const EXPERIENCES_PER_PAGE = 3;
+type PaginationToken = number | 'ellipsis-left' | 'ellipsis-right';
+
+const getPaginationTokens = (
+  currentPage: number,
+  totalPages: number,
+): PaginationToken[] => {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  const tokens: PaginationToken[] = [];
+  if (currentPage > 1) tokens.push('ellipsis-left');
+  tokens.push(currentPage);
+  if (currentPage < totalPages) tokens.push('ellipsis-right');
+  return tokens;
+};
 
 const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -26,10 +42,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
     currentPage * EXPERIENCES_PER_PAGE,
   );
 
-  const pageNumbers = Array.from(
-    { length: totalPages },
-    (_, index) => index + 1,
-  );
+  const pageTokens = getPaginationTokens(currentPage, totalPages);
 
   return (
     <div className="experiences">
@@ -56,18 +69,28 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
               ←
             </button>
 
-            {pageNumbers.map((page) => (
-              <button
-                key={page}
-                type="button"
-                className={`experiences-pagination-page ${page === currentPage ? 'active' : ''}`}
-                onClick={() => setCurrentPage(page)}
-                aria-label={`Go to page ${page}`}
-                aria-current={page === currentPage ? 'page' : undefined}
-              >
-                {page}
-              </button>
-            ))}
+            {pageTokens.map((token) =>
+              typeof token === 'number' ? (
+                <button
+                  key={token}
+                  type="button"
+                  className={`experiences-pagination-page ${token === currentPage ? 'active' : ''}`}
+                  onClick={() => setCurrentPage(token)}
+                  aria-label={`Go to page ${token}`}
+                  aria-current={token === currentPage ? 'page' : undefined}
+                >
+                  {token}
+                </button>
+              ) : (
+                <span
+                  key={token}
+                  className="experiences-pagination-ellipsis"
+                  aria-hidden="true"
+                >
+                  ...
+                </span>
+              ),
+            )}
 
             <button
               type="button"

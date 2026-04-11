@@ -258,6 +258,9 @@
           @apply bg-primary-600 text-white shadow-md;
         }
       }
+      .experiences-pagination-ellipsis {
+        @apply flex h-8 min-w-4 items-center justify-center text-[11px] font-semibold text-slate-500;
+      }
     }
   }
 
@@ -328,6 +331,9 @@
         &.active {
           @apply bg-primary-600 text-white shadow-md;
         }
+      }
+      .trainings-pagination-ellipsis {
+        @apply flex h-8 min-w-4 items-center justify-center text-[11px] font-semibold text-slate-500;
       }
     }
   }

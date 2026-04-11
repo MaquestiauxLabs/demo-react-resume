@@ -54,5 +54,205 @@
     "date": "2016",
     "selfTrained": true,
     "description": "By John Purcell"
+  },
+  {
+    "id": "1f8c6e43-2f10-4c4f-9a3e-5d2f6d8a1011",
+    "name": "Advanced Spring Boot Microservices",
+    "issuer": "Pluralsight",
+    "date": "2018",
+    "selfTrained": true,
+    "description": "Hands-on lab series"
+  },
+  {
+    "id": "2a9d7f54-3e21-4b5a-a4bf-6e3a7e9b2022",
+    "name": "Azure DevOps Engineer Workshop",
+    "issuer": "Microsoft Learning Partner",
+    "date": "2019",
+    "selfTrained": false,
+    "description": "AZ-400 preparation"
+  },
+  {
+    "id": "3bae8065-4d32-4a6b-b5c0-7f4b8fac3033",
+    "name": "Docker and Kubernetes: The Complete Guide",
+    "issuer": "Udemy",
+    "date": "2020",
+    "selfTrained": true,
+    "description": "Self-paced online course"
+  },
+  {
+    "id": "4cbf9176-5c43-497c-c6d1-805c90bd4044",
+    "name": "Secure API Design in Practice",
+    "issuer": "Employer Internal Academy",
+    "date": "2021",
+    "selfTrained": false,
+    "description": "Enterprise security bootcamp"
+  },
+  {
+    "id": "5dc0a287-6b54-486d-d7e2-916da1ce5055",
+    "name": "Event-Driven Architecture with Kafka",
+    "issuer": "Confluent",
+    "date": "2021",
+    "selfTrained": false,
+    "description": "Instructor-led virtual training"
+  },
+  {
+    "id": "6ed1b398-7a65-475e-e8f3-a27eb2df6066",
+    "name": "Terraform for AWS and Azure",
+    "issuer": "A Cloud Guru",
+    "date": "2022",
+    "selfTrained": true,
+    "description": "IaC practical pathways"
+  },
+  {
+    "id": "7fe2c4a9-8976-464f-f904-b38fc3e07077",
+    "name": "Domain-Driven Design Masterclass",
+    "issuer": "VirtualDDD",
+    "date": "2023",
+    "selfTrained": true,
+    "description": "Online conference workshops"
+  },
+  {
+    "id": "80f3d5ba-9887-4550-0a15-c490d4f18188",
+    "name": "Leading Architecture Governance",
+    "issuer": "European Commission Learning & Development",
+    "date": "2024",
+    "selfTrained": false,
+    "description": "Manager-sponsored program"
+  },
+  {
+    "id": "91a4e6cb-a998-4661-1b26-d5a1e5f29299",
+    "name": "Practical GraphQL for Enterprise APIs",
+    "issuer": "Udemy",
+    "date": "2017",
+    "selfTrained": true,
+    "description": "Self-paced API specialization"
+  },
+  {
+    "id": "a2b5f7dc-ba09-4772-2c37-e6b2f603a3aa",
+    "name": "Microsoft Teams Collaboration for Architects",
+    "issuer": "Employer Internal Academy",
+    "date": "2018",
+    "selfTrained": false,
+    "description": "Facilitated remote workshop"
+  },
+  {
+    "id": "b3c608ed-cb1a-4883-3d48-f7c30714b4bb",
+    "name": "Reactive Java with Project Reactor",
+    "issuer": "Pluralsight",
+    "date": "2019",
+    "selfTrained": true,
+    "description": "Hands-on reactive programming path"
+  },
+  {
+    "id": "c4d719fe-dc2b-4994-4e59-a8d41825c5cc",
+    "name": "Financial Systems Risk & Compliance",
+    "issuer": "BNP Paribas Training Center",
+    "date": "2015",
+    "selfTrained": false,
+    "description": "Basel III and MiFID II focus"
+  },
+  {
+    "id": "d5e8200f-ed3c-4aa5-5f6a-b9e52936d6dd",
+    "name": "Kubernetes Operators in Production",
+    "issuer": "Udacity",
+    "date": "2020",
+    "selfTrained": true,
+    "description": "Cloud-native capstone"
+  },
+  {
+    "id": "e6f93110-fe4d-4bb6-6a7b-ca063a47e7ee",
+    "name": "Cloud Security Architecture Bootcamp",
+    "issuer": "SANS Institute",
+    "date": "2021",
+    "selfTrained": false,
+    "description": "Instructor-led intensive"
+  },
+  {
+    "id": "f70a4221-0f5e-4cc7-7b8c-db174b58f8ff",
+    "name": "Apache Kafka Streams Deep Dive",
+    "issuer": "Confluent Developer",
+    "date": "2022",
+    "selfTrained": true,
+    "description": "Online labs and quizzes"
+  },
+  {
+    "id": "081b5332-1a6f-4dd8-8c9d-ec285c690900",
+    "name": "Enterprise API Governance Program",
+    "issuer": "European Commission Learning & Development",
+    "date": "2022",
+    "selfTrained": false,
+    "description": "Cross-DG architecture program"
+  },
+  {
+    "id": "192c6443-2b70-4ee9-9dae-fd396d7a1a11",
+    "name": "Advanced TypeScript Patterns",
+    "issuer": "Frontend Masters",
+    "date": "2023",
+    "selfTrained": true,
+    "description": "Modern TS architecture practices"
+  },
+  {
+    "id": "2a3d7554-3c81-4ffa-aebf-ae4a7e8b2b22",
+    "name": "Designing Event-Driven Systems",
+    "issuer": "Employer Internal Academy",
+    "date": "2023",
+    "selfTrained": false,
+    "description": "Mentored architecture circle"
+  },
+  {
+    "id": "3b4e8665-4d92-400b-bfc0-bf5b8f9c3c33",
+    "name": "Pragmatic Domain-Driven Design",
+    "issuer": "Udemy",
+    "date": "2024",
+    "selfTrained": true,
+    "description": "Case study driven course"
+  },
+  {
+    "id": "4c5f9776-5ea3-411c-c0d1-c06c90ad4d44",
+    "name": "Architecture Communication for Executives",
+    "issuer": "Capgemini University",
+    "date": "2007",
+    "selfTrained": false,
+    "description": "Leadership communication workshop"
+  },
+  {
+    "id": "5d60a887-6fb4-422d-d1e2-d17da1be5e55",
+    "name": "Hands-on Istio Service Mesh",
+    "issuer": "KodeKloud",
+    "date": "2024",
+    "selfTrained": true,
+    "description": "Sandbox scenarios"
+  },
+  {
+    "id": "6e71b998-70c5-433e-e2f3-e28eb2cf6f66",
+    "name": "Secure Software Development Lifecycle",
+    "issuer": "Microsoft Enterprise Skills Initiative",
+    "date": "2020",
+    "selfTrained": false,
+    "description": "Live virtual cohort"
+  },
+  {
+    "id": "7f82caa9-81d6-444f-f304-f39fc3d08077",
+    "name": "Observability with OpenTelemetry",
+    "issuer": "Coursera",
+    "date": "2024",
+    "selfTrained": true,
+    "description": "Self-paced specialization"
+  },
+  {
+    "id": "8093dbba-92e7-4550-0415-a4a0d4e19188",
+    "name": "Strategic Enterprise Architecture Review Board",
+    "issuer": "European School of Administration",
+    "date": "2025",
+    "selfTrained": false,
+    "description": "Blended classroom + Teams sessions"
+  },
+  {
+    "id": "90a4eccb-a3f8-4661-1526-b5b1e5f2a299",
+    "name": "Advanced Prompt Engineering for Architects",
+    "issuer": "Udemy",
+    "date": "2025",
+    "selfTrained": true,
+    "description": "Self-paced AI productivity course"
   }
 ]
