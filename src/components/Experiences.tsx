@@ -1,35 +1,21 @@
 import type { Experience } from '@interfaces';
+import { PAGINATION_DEFAULTS, getPaginationTokens } from '@constants';
 import React from 'react';
 import ExperienceItem from './ExperienceItem';
 
 interface ExperiencesProps {
   experiences: Experience[];
+  itemsPerPage?: number;
+  ellipsisThreshold?: number;
 }
 
-const EXPERIENCES_PER_PAGE = 3;
-type PaginationToken = number | 'ellipsis-left' | 'ellipsis-right';
-
-const getPaginationTokens = (
-  currentPage: number,
-  totalPages: number,
-): PaginationToken[] => {
-  if (totalPages <= 7) {
-    return Array.from({ length: totalPages }, (_, index) => index + 1);
-  }
-
-  const tokens: PaginationToken[] = [];
-  if (currentPage > 1) tokens.push('ellipsis-left');
-  tokens.push(currentPage);
-  if (currentPage < totalPages) tokens.push('ellipsis-right');
-  return tokens;
-};
-
-const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
+const Experiences: React.FC<ExperiencesProps> = ({
+  experiences,
+  itemsPerPage = PAGINATION_DEFAULTS.experiencesPerPage,
+  ellipsisThreshold = PAGINATION_DEFAULTS.ellipsisThreshold,
+}) => {
   const [currentPage, setCurrentPage] = React.useState(1);
-  const totalPages = Math.max(
-    1,
-    Math.ceil(experiences.length / EXPERIENCES_PER_PAGE),
-  );
+  const totalPages = Math.max(1, Math.ceil(experiences.length / itemsPerPage));
 
   React.useEffect(() => {
     if (currentPage > totalPages) {
@@ -38,11 +24,15 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
   }, [currentPage, totalPages]);
 
   const pagedExperiences = experiences.slice(
-    (currentPage - 1) * EXPERIENCES_PER_PAGE,
-    currentPage * EXPERIENCES_PER_PAGE,
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage,
   );
 
-  const pageTokens = getPaginationTokens(currentPage, totalPages);
+  const pageTokens = getPaginationTokens(
+    currentPage,
+    totalPages,
+    ellipsisThreshold,
+  );
 
   return (
     <div className="experiences">
@@ -59,6 +49,15 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
             Page {currentPage} / {totalPages}
           </div>
           <div className="experiences-pagination-nav">
+            <button
+              type="button"
+              className="experiences-pagination-arrow"
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+              aria-label="Go to first page"
+            >
+              «
+            </button>
             <button
               type="button"
               className="experiences-pagination-arrow"
@@ -102,6 +101,15 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
               aria-label="Go to next page"
             >
               →
+            </button>
+            <button
+              type="button"
+              className="experiences-pagination-arrow"
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={currentPage === totalPages}
+              aria-label="Go to last page"
+            >
+              »
             </button>
           </div>
         </div>

@@ -1,35 +1,21 @@
 import type { Training } from '@interfaces';
+import { PAGINATION_DEFAULTS, getPaginationTokens } from '@constants';
 import React from 'react';
 import TrainingItem from './TrainingItem';
 
 interface TrainingProps {
   trainings: Training[];
+  itemsPerPage?: number;
+  ellipsisThreshold?: number;
 }
 
-const TRAININGS_PER_PAGE = 6;
-type PaginationToken = number | 'ellipsis-left' | 'ellipsis-right';
-
-const getPaginationTokens = (
-  currentPage: number,
-  totalPages: number,
-): PaginationToken[] => {
-  if (totalPages <= 7) {
-    return Array.from({ length: totalPages }, (_, index) => index + 1);
-  }
-
-  const tokens: PaginationToken[] = [];
-  if (currentPage > 1) tokens.push('ellipsis-left');
-  tokens.push(currentPage);
-  if (currentPage < totalPages) tokens.push('ellipsis-right');
-  return tokens;
-};
-
-const Trainings: React.FC<TrainingProps> = (props) => {
+const Trainings: React.FC<TrainingProps> = ({
+  trainings,
+  itemsPerPage = PAGINATION_DEFAULTS.trainingsPerPage,
+  ellipsisThreshold = PAGINATION_DEFAULTS.ellipsisThreshold,
+}) => {
   const [currentPage, setCurrentPage] = React.useState(1);
-  const totalPages = Math.max(
-    1,
-    Math.ceil(props.trainings.length / TRAININGS_PER_PAGE),
-  );
+  const totalPages = Math.max(1, Math.ceil(trainings.length / itemsPerPage));
 
   React.useEffect(() => {
     if (currentPage > totalPages) {
@@ -37,12 +23,16 @@ const Trainings: React.FC<TrainingProps> = (props) => {
     }
   }, [currentPage, totalPages]);
 
-  const pagedTrainings = props.trainings.slice(
-    (currentPage - 1) * TRAININGS_PER_PAGE,
-    currentPage * TRAININGS_PER_PAGE,
+  const pagedTrainings = trainings.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage,
   );
 
-  const pageTokens = getPaginationTokens(currentPage, totalPages);
+  const pageTokens = getPaginationTokens(
+    currentPage,
+    totalPages,
+    ellipsisThreshold,
+  );
 
   return (
     <div className="trainings">
@@ -59,6 +49,15 @@ const Trainings: React.FC<TrainingProps> = (props) => {
             Page {currentPage} / {totalPages}
           </div>
           <div className="trainings-pagination-nav">
+            <button
+              type="button"
+              className="trainings-pagination-arrow"
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+              aria-label="Go to first page"
+            >
+              «
+            </button>
             <button
               type="button"
               className="trainings-pagination-arrow"
@@ -102,6 +101,15 @@ const Trainings: React.FC<TrainingProps> = (props) => {
               aria-label="Go to next page"
             >
               →
+            </button>
+            <button
+              type="button"
+              className="trainings-pagination-arrow"
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={currentPage === totalPages}
+              aria-label="Go to last page"
+            >
+              »
             </button>
           </div>
         </div>
