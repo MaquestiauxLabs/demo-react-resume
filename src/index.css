@@ -237,14 +237,14 @@
     .experiences-pagination {
       @apply mt-6 flex flex-wrap items-center justify-between gap-3;
       .experiences-pagination-summary {
-        @apply rounded-full bg-white/70 px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 shadow-sm;
+        @apply rounded-full bg-white/70 px-2 py-0 text-[10px] font-semibold tracking-wide text-slate-600 shadow-sm;
       }
       .experiences-pagination-nav {
-        @apply flex items-center gap-2 rounded-full border border-white/70 bg-white/80 p-2 shadow-sm backdrop-blur-sm;
+        @apply flex items-center gap-1 rounded-full border border-white/70 bg-white/80 p-1 shadow-sm backdrop-blur-sm;
       }
       .experiences-pagination-arrow,
       .experiences-pagination-page {
-        @apply flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-slate-700 transition-all duration-200;
+        @apply flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-semibold text-slate-700 transition-all duration-200;
         &:hover:not(:disabled) {
           @apply border border-primary-100 bg-primary-50 text-primary-700;
           transform: translateY(-1px);
@@ -308,14 +308,14 @@
     .trainings-pagination {
       @apply mt-6 flex flex-wrap items-center justify-between gap-3;
       .trainings-pagination-summary {
-        @apply rounded-full bg-white/70 px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 shadow-sm;
+        @apply rounded-full bg-white/70 px-2 py-0 text-[10px] font-semibold tracking-wide text-slate-600 shadow-sm;
       }
       .trainings-pagination-nav {
-        @apply flex items-center gap-2 rounded-full border border-white/70 bg-white/80 p-2 shadow-sm backdrop-blur-sm;
+        @apply flex items-center gap-1 rounded-full border border-white/70 bg-white/80 p-1 shadow-sm backdrop-blur-sm;
       }
       .trainings-pagination-arrow,
       .trainings-pagination-page {
-        @apply flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-slate-700 transition-all duration-200;
+        @apply flex h-8 w-8 items-center justify-center rounded-full text-[11px] font-semibold text-slate-700 transition-all duration-200;
         &:hover:not(:disabled) {
           @apply border border-primary-100 bg-primary-50 text-primary-700;
           transform: translateY(-1px);
