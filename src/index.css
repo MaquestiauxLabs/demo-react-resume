@@ -78,7 +78,7 @@
               @apply sm:col-span-2;
             }
             .hero-meta-text {
-              @apply min-w-0 break-words;
+              @apply min-w-0 wrap-break-word;
             }
             .hero-meta-email {
               @apply break-all;
@@ -283,7 +283,7 @@
           @apply mt-3 flex items-start gap-2 text-sm leading-snug text-gray-600;
         }
         .training-description {
-          @apply mt-3 rounded-md bg-slate-50 px-3 py-2 text-sm font-medium break-words text-slate-700;
+          @apply mt-3 rounded-md bg-slate-50 px-3 py-2 text-sm font-medium wrap-break-word text-slate-700;
         }
       }
     }
