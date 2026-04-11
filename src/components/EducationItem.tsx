@@ -6,14 +6,18 @@ const EducationItem: React.FC<Education> = (props) => {
   return (
     <div className="education-item">
       <div className="education-item-header">
-        <div className="education-item-logo">
-          <HiAcademicCap />
+        <div className="education-item-summary">
+          <div className="education-item-logo">
+            <HiAcademicCap />
+          </div>
+          <div className="education-item-identity">
+            <div className="education-item-degree">{props.degree}</div>
+            <div className="education-item-institution">
+              {props.institution}
+            </div>
+          </div>
         </div>
-        <div>
-          <div className="education-item-degree">{props.degree}</div>
-          <div className="education-item-institution">{props.institution}</div>
-        </div>
-        <div>
+        <div className="education-item-meta">
           <div className="education-item-duration">{props.duration}</div>
           <div className="education-item-location">
             <HiLocationMarker className="text-blue-500" />

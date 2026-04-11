@@ -23,18 +23,22 @@ const ExperienceItem: React.FC<Experience> = (experience) => {
   return (
     <div className="experience-item">
       <div className="experience-item-header">
-        <div className="experience-item-logo">
-          {experience.company
-            .split(' ')
-            .map((n) => n[0])
-            .join('')
-            .substring(0, 2)}
+        <div className="experience-item-summary">
+          <div className="experience-item-logo">
+            {experience.company
+              .split(' ')
+              .map((n) => n[0])
+              .join('')
+              .substring(0, 2)}
+          </div>
+          <div className="experience-item-identity">
+            <div className="experience-item-position">
+              {experience.position}
+            </div>
+            <div className="experience-item-company">{experience.company}</div>
+          </div>
         </div>
-        <div>
-          <div className="experience-item-position">{experience.position}</div>
-          <div className="experience-item-company">{experience.company}</div>
-        </div>
-        <div>
+        <div className="experience-item-meta">
           <div className="experience-item-duration">{durationLabel}</div>
           <div className="experience-item-location">
             <HiLocationMarker className="text-blue-500" />

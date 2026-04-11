@@ -26,25 +26,32 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className="hero-name">{name}</h1>
           {title && <h2 className="hero-title">{title}</h2>}
           {tagline && <p className="hero-tagline">{tagline}</p>}
+
           <div className="hero-meta">
             {location && (
-              <p className="hero-meta-item">
+              <p className="hero-meta-item hero-meta-item-full">
                 <HiOutlineLocationMarker className="hero-icon" />
-                {location}
+                <span className="hero-meta-text">{location}</span>
               </p>
             )}
+
             {email && (
-              <p className="hero-meta-item">
+              <a
+                href={`mailto:${email}`}
+                className="hero-meta-item hero-meta-item-full"
+              >
                 <HiOutlineMail className="hero-icon" />
-                {email}
-              </p>
+                <span className="hero-meta-text hero-meta-email">{email}</span>
+              </a>
             )}
+
             {phone && (
-              <p className="hero-meta-item">
+              <a href={`tel:${phone}`} className="hero-meta-item">
                 <HiPhoneOutgoing className="hero-icon" />
-                {phone}
-              </p>
+                <span className="hero-meta-text">{phone}</span>
+              </a>
             )}
+
             <div className="hero-socials">
               {linkedin && (
                 <a
@@ -52,6 +59,7 @@ const Hero: React.FC<HeroProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hero-linkedin"
+                  aria-label="LinkedIn profile"
                 >
                   <SiLinkedin />
                 </a>
@@ -62,6 +70,7 @@ const Hero: React.FC<HeroProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hero-github"
+                  aria-label="GitHub profile"
                 >
                   <SiGithub className="hero-icon" />
                 </a>

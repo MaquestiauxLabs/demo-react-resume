@@ -51,53 +51,60 @@
     position: relative;
     overflow: hidden;
     .hero-content {
-      @apply relative z-10 py-4 px-6;
+      @apply relative z-10 px-4 py-4 sm:px-6;
       .hero-card {
-        @apply text-center p-8 bg-primary-50 shadow-lg text-4xl font-bold mb-4 leading-tight;
+        @apply mb-4 rounded-2xl border border-slate-200 bg-linear-to-br from-slate-50 to-sky-50 p-5 text-center shadow-lg sm:p-8;
         filter: drop-shadow(0 10px 8px var(--shadow-light))
           drop-shadow(0 4px 3px var(--shadow));
         .hero-name {
-          @apply text-4xl font-bold mb-4 leading-tight;
+          @apply mb-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:mb-4 sm:text-5xl sm:leading-none;
           filter: drop-shadow(0 10px 8px var(--shadow-light))
             drop-shadow(0 4px 3px var(--shadow));
         }
         .hero-title {
-          @apply text-xl font-medium mb-2 leading-relaxed;
+          @apply mb-2 text-xl font-medium leading-snug text-slate-800 sm:text-2xl;
         }
         .hero-tagline {
-          @apply text-sm leading-relaxed text-gray-700 mb-6;
+          @apply mx-auto mb-6 max-w-2xl text-base leading-relaxed text-gray-700 sm:text-lg;
         }
         .hero-meta {
-          @apply flex flex-wrap justify-center gap-6;
+          @apply grid grid-cols-1 gap-3 sm:grid-cols-2;
           .hero-meta-item {
-            @apply flex items-center gap-2 text-lg leading-relaxed text-gray-600;
+            @apply flex min-w-0 items-start gap-3 rounded-xl border border-slate-200 bg-white/80 px-4 py-3 text-left text-base leading-relaxed text-gray-700 no-underline shadow-sm transition-colors;
+            &:hover {
+              @apply bg-white;
+            }
+            &.hero-meta-item-full {
+              @apply sm:col-span-2;
+            }
+            .hero-meta-text {
+              @apply min-w-0 break-words;
+            }
+            .hero-meta-email {
+              @apply break-all;
+            }
           }
           .hero-socials {
-            @apply flex gap-2 justify-center;
+            @apply flex items-center justify-center gap-3 sm:justify-end;
+            .hero-linkedin,
+            .hero-github {
+              @apply flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-xl no-underline shadow-sm transition-all duration-200;
+              &:hover {
+                @apply -translate-y-0.5 bg-primary-50;
+              }
+            }
             .hero-linkedin {
-              @apply text-lg leading-relaxed text-blue-600 no-underline;
+              @apply text-blue-600;
             }
             .hero-github {
-              @apply text-lg leading-relaxed text-gray-800 no-underline;
+              @apply text-gray-800;
             }
           }
         }
       }
     }
     .hero-icon {
-      @apply text-blue-500;
-    }
-
-    @media (min-width: 768px) {
-      .hero-name {
-        @apply text-5xl leading-none;
-      }
-      .hero-title {
-        @apply text-2xl leading-loose;
-      }
-      .hero-tagline {
-        @apply text-lg leading-relaxed;
-      }
+      @apply mt-0.5 shrink-0 text-blue-500;
     }
   }
 
@@ -119,23 +126,32 @@
     .educations-list {
       @apply mb-4 mt-4;
       .education-item {
-        @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
+        @apply mb-4 rounded-lg border border-gray-200 bg-white p-4 shadow-md;
         .education-item-header {
-          @apply flex justify-between items-center mb-2;
+          @apply mb-2 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+          .education-item-summary {
+            @apply flex min-w-0 flex-1 items-start gap-3;
+          }
           .education-item-logo {
-            @apply w-12 h-12 bg-linear-to-br from-primary-500 to-primary-200 rounded-full flex items-center justify-center text-black text-lg font-bold;
+            @apply h-10 w-10 shrink-0 rounded-full bg-linear-to-br from-primary-500 to-primary-200 flex items-center justify-center text-base font-bold text-black sm:h-12 sm:w-12 sm:text-lg;
+          }
+          .education-item-identity {
+            @apply min-w-0;
           }
           .education-item-degree {
-            @apply text-lg font-semibold text-gray-800;
+            @apply text-base font-semibold leading-tight text-gray-800 sm:text-lg;
           }
           .education-item-institution {
-            @apply text-sm text-gray-600;
+            @apply mt-1 text-sm leading-snug text-gray-600;
+          }
+          .education-item-meta {
+            @apply flex flex-col gap-1 sm:items-end;
           }
           .education-item-duration {
-            @apply text-sm text-gray-600 flex justify-end;
+            @apply text-sm font-medium leading-snug text-gray-600;
           }
           .education-item-location {
-            @apply text-sm text-gray-600 flex justify-end items-center gap-2;
+            @apply flex items-center gap-2 text-sm leading-snug text-gray-600;
           }
         }
         .education-item-achievements {
@@ -166,21 +182,30 @@
       .experience-item {
         @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
         .experience-item-header {
-          @apply flex justify-between items-center mb-2;
+          @apply mb-2 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+          .experience-item-summary {
+            @apply flex min-w-0 flex-1 items-start gap-3;
+          }
           .experience-item-logo {
-            @apply w-12 h-12 bg-linear-to-br from-primary-500 to-primary-200 rounded-full flex items-center justify-center text-black text-lg font-bold;
+            @apply h-10 w-10 shrink-0 rounded-full bg-linear-to-br from-primary-500 to-primary-200 flex items-center justify-center text-base font-bold text-black sm:h-12 sm:w-12 sm:text-lg;
+          }
+          .experience-item-identity {
+            @apply min-w-0;
           }
           .experience-item-position {
-            @apply text-lg font-semibold text-gray-800;
+            @apply text-base font-semibold leading-tight text-gray-800 sm:text-lg;
           }
           .experience-item-company {
-            @apply text-sm text-gray-600;
+            @apply mt-1 text-sm leading-snug text-gray-600;
+          }
+          .experience-item-meta {
+            @apply flex flex-col gap-1 sm:items-end;
           }
           .experience-item-duration {
-            @apply text-sm text-gray-600 flex justify-end;
+            @apply text-sm font-medium leading-snug text-gray-600;
           }
           .experience-item-location {
-            @apply text-sm text-gray-600 flex justify-end items-center gap-2;
+            @apply flex items-center gap-2 text-sm leading-snug text-gray-600;
           }
         }
         .experience-item-responsibilities-list {
@@ -239,24 +264,26 @@
       @apply text-2xl font-bold mb-2 leading-tight text-center text-slate-800;
     }
     .trainings-list {
-      @apply mb-4 mt-4 grid grid-cols-2 gap-2;
+      @apply mb-4 mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2;
       .training-item {
-        @apply mb-4 p-4 bg-white rounded-lg shadow-md border border-gray-200;
-        .training-meta {
-          @apply flex justify-between items-center mb-2;
-
-          .training-issuer {
-            @apply text-sm text-gray-600 flex;
-          }
-          .training-date {
-            @apply text-sm text-gray-600 flex;
-          }
+        @apply h-full rounded-xl border border-gray-200 bg-white p-4 shadow-md;
+        .training-item-top {
+          @apply flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+        }
+        .training-item-icon {
+          @apply mt-1 shrink-0 text-blue-500;
         }
         .training-name {
-          @apply text-lg font-semibold text-gray-800 flex;
+          @apply flex min-w-0 flex-1 items-start gap-2 text-lg font-semibold leading-snug text-gray-800;
+        }
+        .training-date {
+          @apply inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700;
+        }
+        .training-issuer {
+          @apply mt-3 flex items-start gap-2 text-sm leading-snug text-gray-600;
         }
         .training-description {
-          @apply text-sm text-gray-700 mt-2;
+          @apply mt-3 rounded-md bg-slate-50 px-3 py-2 text-sm font-medium break-words text-slate-700;
         }
       }
     }
