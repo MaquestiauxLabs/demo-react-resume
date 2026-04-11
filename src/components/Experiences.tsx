@@ -26,6 +26,11 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
     currentPage * EXPERIENCES_PER_PAGE,
   );
 
+  const pageNumbers = Array.from(
+    { length: totalPages },
+    (_, index) => index + 1,
+  );
+
   return (
     <div className="experiences">
       <div className="experiences-header">Experiences</div>
@@ -40,27 +45,45 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
 
       {totalPages > 1 && (
         <div className="experiences-pagination">
-          <button
-            type="button"
-            className="experiences-pagination-button"
-            onClick={() => setCurrentPage((page) => Math.max(page - 1, 1))}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </button>
-          <span className="experiences-pagination-status">
-            Page {currentPage} of {totalPages}
-          </span>
-          <button
-            type="button"
-            className="experiences-pagination-button"
-            onClick={() =>
-              setCurrentPage((page) => Math.min(page + 1, totalPages))
-            }
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
+          <div className="experiences-pagination-summary">
+            Page {currentPage} / {totalPages}
+          </div>
+          <div className="experiences-pagination-nav">
+            <button
+              type="button"
+              className="experiences-pagination-arrow"
+              onClick={() => setCurrentPage((page) => Math.max(page - 1, 1))}
+              disabled={currentPage === 1}
+              aria-label="Go to previous page"
+            >
+              ←
+            </button>
+
+            {pageNumbers.map((page) => (
+              <button
+                key={page}
+                type="button"
+                className={`experiences-pagination-page ${page === currentPage ? 'active' : ''}`}
+                onClick={() => setCurrentPage(page)}
+                aria-label={`Go to page ${page}`}
+                aria-current={page === currentPage ? 'page' : undefined}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              type="button"
+              className="experiences-pagination-arrow"
+              onClick={() =>
+                setCurrentPage((page) => Math.min(page + 1, totalPages))
+              }
+              disabled={currentPage === totalPages}
+              aria-label="Go to next page"
+            >
+              →
+            </button>
+          </div>
         </div>
       )}
     </div>

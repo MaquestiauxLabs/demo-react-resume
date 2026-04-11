@@ -207,18 +207,28 @@
       }
     }
     .experiences-pagination {
-      @apply flex items-center justify-center gap-4 mt-6 flex-wrap;
-      .experiences-pagination-button {
-        @apply px-4 py-2 rounded-md bg-primary-600 text-white text-sm font-medium transition-colors;
+      @apply mt-6 flex flex-wrap items-center justify-between gap-3;
+      .experiences-pagination-summary {
+        @apply rounded-full bg-white/70 px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 shadow-sm;
+      }
+      .experiences-pagination-nav {
+        @apply flex items-center gap-2 rounded-full border border-white/70 bg-white/80 p-2 shadow-sm backdrop-blur-sm;
+      }
+      .experiences-pagination-arrow,
+      .experiences-pagination-page {
+        @apply flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold text-slate-700 transition-all duration-200;
         &:hover:not(:disabled) {
-          @apply bg-primary-700;
+          @apply border border-primary-100 bg-primary-50 text-primary-700;
+          transform: translateY(-1px);
         }
         &:disabled {
-          @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+          @apply cursor-not-allowed text-gray-400 opacity-60;
         }
       }
-      .experiences-pagination-status {
-        @apply text-sm font-medium text-slate-700;
+      .experiences-pagination-page {
+        &.active {
+          @apply bg-primary-600 text-white shadow-md;
+        }
       }
     }
   }
