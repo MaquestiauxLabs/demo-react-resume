@@ -2,7 +2,24 @@ import type { Experience } from '@interfaces';
 import React from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
 
+const DATE_FORMATTER = new Intl.DateTimeFormat('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+});
+
+const formatDate = (value: string) => {
+  const [day, month, year] = value.split('/').map(Number);
+  const parsedDate = new Date(year, month - 1, day);
+
+  return Number.isNaN(parsedDate.getTime())
+    ? value
+    : DATE_FORMATTER.format(parsedDate);
+};
+
 const ExperienceItem: React.FC<Experience> = (experience) => {
+  const durationLabel = `${formatDate(experience.startDate)} — ${experience.endDate ? formatDate(experience.endDate) : 'Present'}`;
+
   return (
     <div className="experience-item">
       <div className="experience-item-header">
@@ -18,7 +35,7 @@ const ExperienceItem: React.FC<Experience> = (experience) => {
           <div className="experience-item-company">{experience.company}</div>
         </div>
         <div>
-          <div className="experience-item-duration">{experience.duration}</div>
+          <div className="experience-item-duration">{durationLabel}</div>
           <div className="experience-item-location">
             <HiLocationMarker className="text-blue-500" />
             {experience.location}
