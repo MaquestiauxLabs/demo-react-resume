@@ -1,20 +1,23 @@
 [
-    {
-        "name": "English",
-        "isocode": "EN",
-        "level": "B2",
-        "motherTongue": false
-    },
-    {
-        "name": "Spanish",
-        "isocode": "ES",
-        "level": "A2",
-        "motherTongue": false
-    },
-    {
-        "name": "French",
-        "isocode": "FR",
-        "level": "C1",
-        "motherTongue": true
-    }
+  {
+    "id": "e5b6c7d8-9a0f-4b1c-2d23-c4d5e6f7a8b9",
+    "name": "English",
+    "isocode": "EN",
+    "level": "B2",
+    "motherTongue": false
+  },
+  {
+    "id": "f6c7d8e9-0b1a-4c2d-3e24-d5e6f7a8b9c0",
+    "name": "Spanish",
+    "isocode": "ES",
+    "level": "A2",
+    "motherTongue": false
+  },
+  {
+    "id": "a7d8e9f0-1c2b-4d3e-4f25-e6f7a8b9c0d1",
+    "name": "French",
+    "isocode": "FR",
+    "level": "C1",
+    "motherTongue": true
+  }
 ]

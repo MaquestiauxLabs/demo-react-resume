@@ -11,8 +11,8 @@ const Educations: React.FC<EducationsProps> = (props) => {
     <div className="educations">
       <div className="educations-header">Educations</div>
       <div className="educations-list">
-        {props.education.map((edu, index) => (
-          <EducationItem key={index} {...edu} />
+        {props.education.map((edu) => (
+          <EducationItem key={edu.id} {...edu} />
         ))}
       </div>
     </div>

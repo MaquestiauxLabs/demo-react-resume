@@ -11,7 +11,7 @@ const Trainings: React.FC<TrainingProps> = (props) => {
       <div className="trainings-header">Trainings</div>
       <div className="trainings-list">
         {props.trainings.map((training) => (
-          <TrainingItem key={training.name} {...training} />
+          <TrainingItem key={training.id} {...training} />
         ))}
       </div>
     </div>

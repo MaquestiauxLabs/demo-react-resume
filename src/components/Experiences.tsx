@@ -35,11 +35,8 @@ const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
     <div className="experiences">
       <div className="experiences-header">Experiences</div>
       <div className="experiences-list">
-        {pagedExperiences.map((exp, index) => (
-          <ExperienceItem
-            key={`${exp.company}-${exp.position}-${index}`}
-            {...exp}
-          />
+        {pagedExperiences.map((exp) => (
+          <ExperienceItem key={exp.id} {...exp} />
         ))}
       </div>
 

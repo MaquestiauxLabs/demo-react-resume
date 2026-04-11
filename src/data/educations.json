@@ -1,5 +1,6 @@
 [
   {
+    "id": "d2a3f4c5-6b7d-4e8f-9a10-b1c2d3e4f5a6",
     "degree": "Ph.D. in Computer Science - Distributed Systems",
     "institution": "École Polytechnique Fédérale de Lausanne (EPFL)",
     "location": "Lausanne, Switzerland",
@@ -11,6 +12,7 @@
     ]
   },
   {
+    "id": "e3b4c5d6-7a8f-4b9c-0d11-c2d3e4f5a6b7",
     "degree": "Master of Science in Software Engineering",
     "institution": "Technical University of Munich",
     "location": "Munich, Germany",
@@ -21,6 +23,7 @@
     ]
   },
   {
+    "id": "f4c5d6e7-8b9a-4c0d-1e12-d3e4f5a6b7c8",
     "degree": "Bachelor of Engineering in Computer Science",
     "institution": "École Centrale Paris",
     "location": "Paris, France",

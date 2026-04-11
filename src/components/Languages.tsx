@@ -12,7 +12,7 @@ const Languages: React.FC<LanguageProps> = (props) => {
       <div className="languages-header">Languages</div>
       <div className="languages-list">
         {props.languages.map((lang) => (
-          <LanguageItem key={lang.isocode} language={lang} />
+          <LanguageItem key={lang.id} language={lang} />
         ))}
       </div>
     </div>
