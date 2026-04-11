@@ -19,6 +19,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
                 key={skill.name}
                 name={skill.name}
                 level={skill.level}
+                months={skill.months}
               />
             ))}
           </div>

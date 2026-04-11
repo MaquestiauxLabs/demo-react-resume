@@ -343,12 +343,15 @@
       @apply mb-4 mt-4;
     }
     .skill-item {
-      @apply text-slate-700 text-sm font-medium flex gap-2 justify-between;
+      @apply text-slate-700 text-sm font-medium flex gap-2 justify-between items-center py-1;
       .skill-name {
         @apply text-slate-700 text-sm font-medium;
       }
+      .skill-months {
+        @apply text-xs text-slate-400 font-normal;
+      }
       .skill-stars {
-        @apply flex;
+        @apply flex shrink-0 pt-0.5;
         .skill-level-5 {
           @apply flex text-amber-500;
         }

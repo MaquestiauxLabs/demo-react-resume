@@ -2,45 +2,45 @@
   {
     "category": "Cloud & Infrastructure",
     "skills": [
-      { "name": "AWS", "level": "expert" },
-      { "name": "Azure", "level": "expert" },
-      { "name": "Google Cloud", "level": "advanced" },
-      { "name": "Kubernetes", "level": "expert" },
-      { "name": "Docker", "level": "expert" },
-      { "name": "Terraform", "level": "advanced" }
+      { "name": "AWS", "level": "expert", "months": 96 },
+      { "name": "Azure", "level": "expert", "months": 144 },
+      { "name": "Google Cloud", "level": "advanced", "months": 48 },
+      { "name": "Kubernetes", "level": "expert", "months": 84 },
+      { "name": "Docker", "level": "expert", "months": 108 },
+      { "name": "Terraform", "level": "advanced", "months": 36 }
     ]
   },
   {
     "category": "Programming Languages",
     "skills": [
-      { "name": "Java", "level": "expert" },
-      { "name": "TypeScript/JavaScript", "level": "expert" },
-      { "name": "Python", "level": "advanced" },
-      { "name": "C#", "level": "advanced" },
-      { "name": "Go", "level": "intermediate" },
-      { "name": "SQL", "level": "expert" }
+      { "name": "Java", "level": "expert", "months": 216 },
+      { "name": "TypeScript/JavaScript", "level": "expert", "months": 132 },
+      { "name": "Python", "level": "advanced", "months": 72 },
+      { "name": "C#", "level": "advanced", "months": 96 },
+      { "name": "Go", "level": "intermediate", "months": 24 },
+      { "name": "SQL", "level": "expert", "months": 276 }
     ]
   },
   {
     "category": "Frameworks & Platforms",
     "skills": [
-      { "name": "Spring Boot", "level": "expert" },
-      { "name": "React", "level": "advanced" },
-      { "name": "Node.js", "level": "expert" },
-      { "name": ".NET Core", "level": "advanced" },
-      { "name": "Angular", "level": "intermediate" },
-      { "name": "Hibernate", "level": "expert" }
+      { "name": "Spring Boot", "level": "expert", "months": 144 },
+      { "name": "React", "level": "advanced", "months": 72 },
+      { "name": "Node.js", "level": "expert", "months": 108 },
+      { "name": ".NET Core", "level": "advanced", "months": 96 },
+      { "name": "Angular", "level": "intermediate", "months": 36 },
+      { "name": "Hibernate", "level": "expert", "months": 180 }
     ]
   },
   {
     "category": "Architecture & Design",
     "skills": [
-      { "name": "Microservices", "level": "expert" },
-      { "name": "Domain-Driven Design", "level": "expert" },
-      { "name": "Event-Driven Architecture", "level": "expert" },
-      { "name": "API Design", "level": "expert" },
-      { "name": "System Integration", "level": "expert" },
-      { "name": "Security Architecture", "level": "advanced" }
+      { "name": "Microservices", "level": "expert", "months": 120 },
+      { "name": "Domain-Driven Design", "level": "expert", "months": 156 },
+      { "name": "Event-Driven Architecture", "level": "expert", "months": 96 },
+      { "name": "API Design", "level": "expert", "months": 168 },
+      { "name": "System Integration", "level": "expert", "months": 268 },
+      { "name": "Security Architecture", "level": "advanced", "months": 84 }
     ]
   }
 ]
