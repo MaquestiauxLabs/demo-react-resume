@@ -206,6 +206,21 @@
         }
       }
     }
+    .experiences-pagination {
+      @apply flex items-center justify-center gap-4 mt-6 flex-wrap;
+      .experiences-pagination-button {
+        @apply px-4 py-2 rounded-md bg-primary-600 text-white text-sm font-medium transition-colors;
+        &:hover:not(:disabled) {
+          @apply bg-primary-700;
+        }
+        &:disabled {
+          @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+        }
+      }
+      .experiences-pagination-status {
+        @apply text-sm font-medium text-slate-700;
+      }
+    }
   }
 
   .trainings {
